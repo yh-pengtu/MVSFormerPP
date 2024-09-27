@@ -1,0 +1,8 @@
+{
+  "python": "3.9.* *_73_pypy",
+  "channel_targets": "conda-forge main",
+  "target_platform": "linux-64",
+  "c_compiler_version": "12",
+  "c_compiler": "gcc",
+  "zstd": "1.5"
+}

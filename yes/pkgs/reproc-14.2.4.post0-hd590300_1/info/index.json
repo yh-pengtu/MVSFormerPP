@@ -1,0 +1,14 @@
+{
+  "arch": "x86_64",
+  "build": "hd590300_1",
+  "build_number": 1,
+  "depends": [
+    "libgcc-ng >=12"
+  ],
+  "license": "MIT",
+  "name": "reproc",
+  "platform": "linux",
+  "subdir": "linux-64",
+  "timestamp": 1698242272153,
+  "version": "14.2.4.post0"
+}

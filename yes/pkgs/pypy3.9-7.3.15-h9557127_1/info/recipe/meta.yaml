@@ -1,0 +1,154 @@
+# This file created by conda-build 24.1.2
+# meta.yaml template originally from:
+# /home/conda/recipe_root, last modified Fri Mar  8 07:28:26 2024
+# ------------------------------------------------
+
+package:
+  name: pypy3.9
+  version: 7.3.15
+source:
+  - folder: pypy3
+    patches:
+      - patches/0001-Add-conda-forge-version.patch
+      - patches/0001-Fix-TZPATH-on-windows.patch
+      - patches/0001-fix-os.scandir-for-unicode-filenames-on-windows.patch
+      - patches/0003-add-coding-to-test-file-for-cpython2-pypy2-does-not-.patch
+      - patches/0004-PyPy-is-not-affected-by-bpo-35797.patch
+      - patches/0005-underlying-_putwch-on-windows-accepts-a-chr-not-an-i.patch
+      - patches/0006-refactor-to-properly-create-ppc64-import-suffixes.patch
+      - patches/0009-runtime_library_dir_option-Use-1st-word-of-CC-as-com.patch
+      - patches/0012-Fix-find_library-so-that-it-looks-in-sys.prefix-lib-.patch
+      - patches/0013-Disable-new-dtags-in-unixccompiler.py.patch
+      - patches/0014-Add-CondaEcosystemModifyDllSearchPath.patch
+      - patches/0020-Use-ranlib-from-env-if-env-variable-is-set.patch
+      - patches/0021-Adapt-platform-to-patch-0001.patch
+      - patches/0023b-Fix-LIBDIR.patch
+      - patches/0024-Fix-LDSHARED-when-CC-is-overriden-on-Linux-too.patch
+      - patches/0030-Swap-libffi8-for-7.patch
+      - patches/0032-Copy-dependent-libs-for-venvs.patch
+      - patches/0033-remove-top-level-__init__.py-issue-4885.patch
+      - patches/fficurses.patch
+      - patches/tk_app.patch
+      - patches/tklib_build.patch
+    sha256: 6bb9537d85aa7ad13c0aad2e41ff7fd55080bc9b4d1361b8f502df51db816e18
+    url: https://downloads.python.org/pypy/pypy3.9-v7.3.15-src.tar.bz2
+build:
+  number: '1'
+  skip_compile_pyc:
+    - lib*
+  string: h9557127_1
+requirements:
+  build:
+    - _libgcc_mutex 0.1 conda_forge
+    - _openmp_mutex 4.5 2_gnu
+    - binutils_impl_linux-64 2.40 hf600244_0
+    - binutils_linux-64 2.40 hbdbef99_2
+    - ca-certificates 2024.2.2 hbcca054_0
+    - expat 2.6.1 h59595ed_0
+    - gcc_impl_linux-64 12.3.0 he2b93b0_5
+    - gcc_linux-64 12.3.0 h76fc315_2
+    - kernel-headers_linux-64 2.6.32 he073ed8_17
+    - ld_impl_linux-64 2.40 h41732ed_0
+    - libexpat 2.6.1 h59595ed_0
+    - libffi 3.2.1 he1b5a44_1007
+    - libgcc-devel_linux-64 12.3.0 h8bca6fd_105
+    - libgcc-ng 13.2.0 h807b86a_5
+    - libgomp 13.2.0 h807b86a_5
+    - libsanitizer 12.3.0 h0f45ef3_5
+    - libsqlite 3.45.1 h2797004_0
+    - libstdcxx-ng 13.2.0 h7e041cc_5
+    - libzlib 1.2.13 hd590300_5
+    - ncurses 6.4 h59595ed_2
+    - openssl 1.1.1w hd590300_0
+    - pkg-config 0.29.2 h36c2ea0_1008
+    - pycparser 2.21 pyhd8ed1ab_0
+    - python 2.7.15 h5a48372_1011_cpython
+    - readline 8.2 h8228510_1
+    - sqlite 3.45.1 h2c6b66d_0
+    - sysroot_linux-64 2.12 he073ed8_17
+    - tk 8.6.13 noxft_h4845f30_101
+    - zlib 1.2.13 hd590300_5
+  host:
+    - _libgcc_mutex 0.1 conda_forge
+    - _openmp_mutex 4.5 2_gnu
+    - bzip2 1.0.8 hd590300_5
+    - ca-certificates 2024.2.2 hbcca054_0
+    - expat 2.6.1 h59595ed_0
+    - gdbm 1.18 h0a1914f_2
+    - libexpat 2.6.1 h59595ed_0
+    - libffi 3.4.2 h7f98852_5
+    - libgcc-ng 13.2.0 h807b86a_5
+    - libgomp 13.2.0 h807b86a_5
+    - libsqlite 3.45.1 h2797004_0
+    - libxcb 1.15 h0b41bf4_0
+    - libzlib 1.2.13 hd590300_5
+    - make 4.3 hd18ef5c_1
+    - ncurses 6.4 h59595ed_2
+    - openssl 3.2.1 hd590300_0
+    - pthread-stubs 0.4 h36c2ea0_1001
+    - readline 8.2 h8228510_1
+    - sqlite 3.45.1 h2c6b66d_0
+    - tk 8.6.13 noxft_h4845f30_101
+    - tzdata 2024a h0c530f3_0
+    - xorg-kbproto 1.0.7 h7f98852_1002
+    - xorg-libx11 1.8.7 h8ee46fc_0
+    - xorg-libxau 1.0.11 hd590300_0
+    - xorg-libxdmcp 1.1.3 h7f98852_0
+    - xorg-xextproto 7.3.0 h0b41bf4_1003
+    - xorg-xproto 7.0.31 h7f98852_1007
+    - xz 5.2.6 h166bdaf_0
+    - zlib 1.2.13 hd590300_5
+  run:
+    - bzip2 >=1.0.8,<2.0a0
+    - expat
+    - gdbm >=1.18,<1.19.0a0
+    - libexpat >=2.6.1,<3.0a0
+    - libffi >=3.4,<4.0a0
+    - libgcc-ng >=12
+    - libsqlite >=3.45.1,<4.0a0
+    - libzlib >=1.2.13,<1.3.0a0
+    - ncurses >=6.4,<7.0a0
+    - openssl >=3.2.1,<4.0a0
+    - sqlite
+    - tk >=8.6.13,<8.7.0a0
+    - tzdata
+    - xorg-libx11 >=1.8.7,<2.0a0
+    - xz >=5.2.6,<6.0a0
+    - zlib
+  run_constrained:
+    - pypy3.10 ==99999999999
+    - pypy3.5 ==99999999999
+    - pypy3.6 ==99999999999
+    - pypy3.7 ==99999999999
+    - pypy3.8 ==99999999999
+    - python 3.9.* *_73_pypy
+test:
+  commands:
+    - pypy3 --help
+    - pypy3 -c "import platform; print(platform._sys_version())"
+    - test -f $PREFIX/lib/pypy3.9/lib2to3/Grammar3.9*.pickle
+    - test -f $PREFIX/lib/pypy3.9/lib2to3/PatternGrammar3.9*.pickle
+    - pypy3 -c "from zoneinfo import ZoneInfo; from datetime import datetime; dt =
+      datetime(2020, 10, 31, 12, tzinfo=ZoneInfo('America/Los_Angeles')); print(dt.tzname())"
+    - pypy3 -m test.test_ssl
+about:
+  home: http://pypy.org/
+  license: MIT
+  license_family: MIT
+  license_file: pypy3/LICENSE
+  summary: 'PyPy is a Python interpreter and just-in-time compiler. See https://conda-forge.org/blog/posts/2020-03-10-pypy
+    for more information about using PyPy in conda
+
+    '
+extra:
+  copy_test_source_files: true
+  final: true
+  flow_run_id: azure_20240308.2.1
+  recipe-maintainers:
+    - isuruf
+    - mattip
+    - ocefpaf
+    - ohadravid
+    - omerbenamram
+  remote_url: https://github.com/conda-forge/pypy3.6-feedstock
+  sha: 700b59cba26f7a72b3e857e25ced3eeae278539d

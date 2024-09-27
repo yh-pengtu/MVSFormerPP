@@ -1,0 +1,17 @@
+{
+  "arch": "x86_64",
+  "build": "hfc55251_2",
+  "build_number": 2,
+  "depends": [
+    "libgcc-ng >=12",
+    "libstdcxx-ng >=12",
+    "libzlib >=1.2.13,<1.3.0a0"
+  ],
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "name": "libsolv",
+  "platform": "linux",
+  "subdir": "linux-64",
+  "timestamp": 1711553127824,
+  "version": "0.7.28"
+}

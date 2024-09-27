@@ -1,0 +1,22 @@
+{
+    "arch": "x86_64",
+    "build": "h0a1914f_2",
+    "build_number": 2,
+    "channel": "conda-forge",
+    "depends": [
+        "libgcc-ng >=7.5.0",
+        "readline >=8.0,<9.0a0"
+    ],
+    "fn": "gdbm-1.18-h0a1914f_2.tar.bz2",
+    "license": "GPL-3.0",
+    "license_family": "GPL",
+    "md5": "b77bc399b07a19c00fe12fdc95ee0297",
+    "name": "gdbm",
+    "platform": "linux",
+    "sha256": "8b9606dc896bd9262d09ab2ef1cb55c4ee43f352473209b58b37a9289dd7b00c",
+    "size": 194790,
+    "subdir": "linux-64",
+    "timestamp": 1597622040785,
+    "url": "https://conda.anaconda.org/conda-forge/linux-64/gdbm-1.18-h0a1914f_2.tar.bz2",
+    "version": "1.18"
+}

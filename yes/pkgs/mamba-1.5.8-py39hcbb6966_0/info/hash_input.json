@@ -1,0 +1,6 @@
+{
+  "channel_targets": "conda-forge main",
+  "python": "3.9.* *_73_pypy",
+  "target_platform": "linux-64",
+  "openssl": "3"
+}

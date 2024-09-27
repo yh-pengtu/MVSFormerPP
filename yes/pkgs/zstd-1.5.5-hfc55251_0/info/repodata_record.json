@@ -1,0 +1,23 @@
+{
+    "arch": "x86_64",
+    "build": "hfc55251_0",
+    "build_number": 0,
+    "channel": "conda-forge",
+    "depends": [
+        "libgcc-ng >=12",
+        "libstdcxx-ng >=12",
+        "libzlib >=1.2.13,<1.3.0a0"
+    ],
+    "fn": "zstd-1.5.5-hfc55251_0.conda",
+    "license": "BSD-3-Clause",
+    "license_family": "BSD",
+    "md5": "04b88013080254850d6c01ed54810589",
+    "name": "zstd",
+    "platform": "linux",
+    "sha256": "607cbeb1a533be98ba96cf5cdf0ddbb101c78019f1fda063261871dad6248609",
+    "size": 545199,
+    "subdir": "linux-64",
+    "timestamp": 1693151163452,
+    "url": "https://conda.anaconda.org/conda-forge/linux-64/zstd-1.5.5-hfc55251_0.conda",
+    "version": "1.5.5"
+}

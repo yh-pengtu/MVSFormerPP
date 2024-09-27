@@ -1,0 +1,46 @@
+diff -r 1328cd0b061e lib_pypy/_tkinter/tklib_build.py
+--- a/lib_pypy/_tkinter/tklib_build.py	Sun Jan 08 09:54:04 2023 +0200
++++ b/lib_pypy/_tkinter/tklib_build.py	Sun Jan 08 12:40:36 2023 +0200
+@@ -17,40 +17,10 @@
+     incdirs = []
+     linklibs = ['tcl86t', 'tk86t']
+     libdirs = []
+-elif sys.platform == 'darwin':
+-    # homebrew
+-    homebrew = os.environ.get('HOMEBREW_PREFIX', '')
+-    incdirs = ['/usr/local/opt/tcl-tk/include']
+-    linklibs = ['tcl8.6', 'tk8.6']
+-    libdirs = []
+-    if homebrew:
+-        incdirs.append(homebrew + '/include')
+-        libdirs.append(homebrew + '/opt/tcl-tk/lib')
+ else:
+-    # On some Linux distributions, the tcl and tk libraries are
+-    # stored in /usr/include, so we must check this case also
++    incdirs = []
++    linklibs = ['tcl8.6', 'tk8.6']
+     libdirs = []
+-    found = False
+-    for _ver in ['', '8.6', '8.5']:
+-        incdirs = ['/usr/include/tcl' + _ver]
+-        linklibs = ['tcl' + _ver, 'tk' + _ver]
+-        if os.path.isdir(incdirs[0]):
+-            found = True
+-            break
+-    if not found:
+-        for _ver in ['8.6', '8.5', '']:
+-            incdirs = []
+-            linklibs = ['tcl' + _ver, 'tk' + _ver]
+-            for lib in ['/usr/lib/lib', '/usr/lib64/lib']: 
+-                if os.path.isfile(''.join([lib, linklibs[1], '.so'])):
+-                    found = True
+-                    break
+-            if found:
+-                break
+-    if not found:
+-        sys.stderr.write("*** TCL libraries not found!  Falling back...\n")
+-        incdirs = []
+-        linklibs = ['tcl', 'tk']
+ 
+ config_ffi = FFI()
+ config_ffi.cdef("""

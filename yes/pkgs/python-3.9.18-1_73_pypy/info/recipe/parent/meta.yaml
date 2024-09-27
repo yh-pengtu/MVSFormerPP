@@ -1,0 +1,83 @@
+{% if version is not defined %}
+{% set version = "7.3.15" %}
+{% endif %}
+{% if python_version is not defined %}
+{% set python_version = "3.9.18" %}
+{% endif %}
+{% set cffi_version = "1.16.0" %}
+{% set python_maj_min = ".".join(python_version.split(".")[:2]) %}
+# Keep increasing this until we get a new version, python_version and cffi_version. Do not reset
+{% set build_num = "1" %}
+{% set pypy_abi = "".join(version.split(".")[:2]) %}
+
+package:
+  name: pypy-meta
+  version: {{ version }}
+
+build:
+  number: {{ build_num }}
+
+outputs:
+  - name: python
+    version: {{ python_version }}
+    build:
+      number: {{ build_num }}
+      string: {{ build_num }}_{{ pypy_abi }}_pypy
+      track_features:
+        - pypy
+      run_exports:
+        weak:
+          - pypy{{ python_maj_min }} >={{ version }}
+          - python_abi {{ python_maj_min }} *_pypy{{ python_maj_min.replace(".", "") }}_pp{{ pypy_abi }}
+        noarch:
+          - {{ pin_subpackage("python", max_pin="x.x", min_pin="x.x") }}
+    requirements:
+      host:
+        - pypy{{ python_maj_min }} {{ version }}
+      run:
+        - pypy{{ python_maj_min }} {{ version }}
+        - python_abi {{ python_maj_min }} *_pypy{{ python_maj_min.replace(".", "") }}_pp{{ pypy_abi }}
+    test:
+      commands:
+        - python --version
+        - test $(python -c "import sys;print('.'.join(str(i) for i in sys.version_info[:3]))") == "{{ python_version }}"  # [unix]
+
+  - name: pypy
+    version: {{ version }}
+    build:
+      number: {{ build_num }}
+      string: {{ build_num }}_pypy{{ python_maj_min.replace(".", "") }}
+      noarch: generic
+    requirements:
+      run:
+        - python {{ python_version }} {{ build_num }}_{{ pypy_abi }}_pypy
+    test:
+      commands:
+        - pypy --version
+
+  - name: cffi
+    version: {{ cffi_version }}
+    build:
+      number: {{ build_num }}
+      string: {{ build_num }}_pypy{{ python_maj_min.replace(".", "") }}
+      noarch: generic
+    requirements:
+      run:
+        - pypy{{ python_maj_min }} {{ version }}
+        - python {{ python_version }} {{ build_num }}_{{ pypy_abi }}_pypy
+        - python_abi {{ python_maj_min }} *_pypy{{ python_maj_min.replace(".", "") }}_pp{{ pypy_abi }}
+    test:
+      commands:
+        - test $(python -c "import cffi;print(cffi.__version__)") == "{{ cffi_version }}"   # [unix]
+
+about:
+  home: https://github.com/conda-forge/pypy-meta-feedstock
+  summary: Metapackage to select pypy as python implementation
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE
+
+extra:
+  recipe-maintainers:
+    - isuruf
+    - mattip

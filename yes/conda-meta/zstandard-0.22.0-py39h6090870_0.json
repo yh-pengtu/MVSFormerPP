@@ -1,0 +1,136 @@
+{
+    "arch": "x86_64",
+    "build": "py39h6090870_0",
+    "build_number": 0,
+    "channel": "conda-forge",
+    "depends": [
+        "cffi >=1.11",
+        "libgcc-ng >=12",
+        "pypy3.9 >=7.3.13",
+        "python >=3.9,<3.10.0a0",
+        "python_abi 3.9 *_pypy39_pp73",
+        "zstd >=1.5.5,<1.5.6.0a0",
+        "zstd >=1.5.5,<1.6.0a0"
+    ],
+    "extracted_package_dir": "/home/ruqi/projects/MVSFormerPlusPlus/yes/pkgs/zstandard-0.22.0-py39h6090870_0",
+    "files": [
+        "lib/python3.9/site-packages/zstandard-0.22.0-py3.9.egg-info/PKG-INFO",
+        "lib/python3.9/site-packages/zstandard-0.22.0-py3.9.egg-info/SOURCES.txt",
+        "lib/python3.9/site-packages/zstandard-0.22.0-py3.9.egg-info/dependency_links.txt",
+        "lib/python3.9/site-packages/zstandard-0.22.0-py3.9.egg-info/requires.txt",
+        "lib/python3.9/site-packages/zstandard-0.22.0-py3.9.egg-info/top_level.txt",
+        "lib/python3.9/site-packages/zstandard/__init__.py",
+        "lib/python3.9/site-packages/zstandard/__init__.pyi",
+        "lib/python3.9/site-packages/zstandard/__pycache__/__init__.pypy39.pyc",
+        "lib/python3.9/site-packages/zstandard/__pycache__/backend_cffi.pypy39.pyc",
+        "lib/python3.9/site-packages/zstandard/_cffi.pypy39-pp73-x86_64-linux-gnu.so",
+        "lib/python3.9/site-packages/zstandard/backend_cffi.py",
+        "lib/python3.9/site-packages/zstandard/py.typed"
+    ],
+    "fn": "zstandard-0.22.0-py39h6090870_0.conda",
+    "license": "BSD-3-Clause",
+    "license_family": "BSD",
+    "link": {
+        "source": "/home/ruqi/projects/MVSFormerPlusPlus/yes/pkgs/zstandard-0.22.0-py39h6090870_0",
+        "type": 1
+    },
+    "md5": "1ef0de5e7bb652756b11bed0fc98f09e",
+    "name": "zstandard",
+    "package_tarball_full_path": "/home/ruqi/projects/MVSFormerPlusPlus/yes/pkgs/zstandard-0.22.0-py39h6090870_0.tar.bz2",
+    "paths_data": {
+        "paths": [
+            {
+                "_path": "lib/python3.9/site-packages/zstandard-0.22.0-py3.9.egg-info/PKG-INFO",
+                "path_type": "hardlink",
+                "sha256": "3c058f938ca7062832d6f86b61a2a49c2046ee513f92a2b779d5144804e7fa31",
+                "sha256_in_prefix": "3c058f938ca7062832d6f86b61a2a49c2046ee513f92a2b779d5144804e7fa31",
+                "size_in_bytes": 2905
+            },
+            {
+                "_path": "lib/python3.9/site-packages/zstandard-0.22.0-py3.9.egg-info/SOURCES.txt",
+                "path_type": "hardlink",
+                "sha256": "2902c4078db8dc1081804d32ed07d8472efcde5971844f7a10624f60a8224299",
+                "sha256_in_prefix": "2902c4078db8dc1081804d32ed07d8472efcde5971844f7a10624f60a8224299",
+                "size_in_bytes": 2739
+            },
+            {
+                "_path": "lib/python3.9/site-packages/zstandard-0.22.0-py3.9.egg-info/dependency_links.txt",
+                "path_type": "hardlink",
+                "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+                "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+                "size_in_bytes": 1
+            },
+            {
+                "_path": "lib/python3.9/site-packages/zstandard-0.22.0-py3.9.egg-info/requires.txt",
+                "path_type": "hardlink",
+                "sha256": "11409f2a84863ef7a7294f76de5f540c867eb619e0070540b5f1213827a5f87b",
+                "sha256_in_prefix": "11409f2a84863ef7a7294f76de5f540c867eb619e0070540b5f1213827a5f87b",
+                "size_in_bytes": 75
+            },
+            {
+                "_path": "lib/python3.9/site-packages/zstandard-0.22.0-py3.9.egg-info/top_level.txt",
+                "path_type": "hardlink",
+                "sha256": "27ec23f78a4f69d6388a915a6a7ad8065acc6e53927a01184bca3f2dda20ae95",
+                "sha256_in_prefix": "27ec23f78a4f69d6388a915a6a7ad8065acc6e53927a01184bca3f2dda20ae95",
+                "size_in_bytes": 10
+            },
+            {
+                "_path": "lib/python3.9/site-packages/zstandard/__init__.py",
+                "path_type": "hardlink",
+                "sha256": "ec26a5076f24095c2ac1f9612d41e77b23cafccb76c69fce82ddb82121e54284",
+                "sha256_in_prefix": "ec26a5076f24095c2ac1f9612d41e77b23cafccb76c69fce82ddb82121e54284",
+                "size_in_bytes": 7102
+            },
+            {
+                "_path": "lib/python3.9/site-packages/zstandard/__init__.pyi",
+                "path_type": "hardlink",
+                "sha256": "92f3fa52cf483d7e12b1f839070684dff13bbae135633554a3d853cd851c3470",
+                "sha256_in_prefix": "92f3fa52cf483d7e12b1f839070684dff13bbae135633554a3d853cd851c3470",
+                "size_in_bytes": 13938
+            },
+            {
+                "_path": "lib/python3.9/site-packages/zstandard/__pycache__/__init__.pypy39.pyc",
+                "path_type": "hardlink",
+                "sha256": "840c26e5425b230c60173aca71800a7e68097f7a63c751d2332d74c22a238c5c",
+                "sha256_in_prefix": "840c26e5425b230c60173aca71800a7e68097f7a63c751d2332d74c22a238c5c",
+                "size_in_bytes": 5098
+            },
+            {
+                "_path": "lib/python3.9/site-packages/zstandard/__pycache__/backend_cffi.pypy39.pyc",
+                "path_type": "hardlink",
+                "sha256": "6f088d2e4ebd6e70a5906939ce538d7ec956d2d21ec4cef21be0d0689da5dd5e",
+                "sha256_in_prefix": "6f088d2e4ebd6e70a5906939ce538d7ec956d2d21ec4cef21be0d0689da5dd5e",
+                "size_in_bytes": 138183
+            },
+            {
+                "_path": "lib/python3.9/site-packages/zstandard/_cffi.pypy39-pp73-x86_64-linux-gnu.so",
+                "path_type": "hardlink",
+                "sha256": "4a61aa3a3a713c9b8c3fa3e4beb1a3cf5b100c4be1245af6e80d262dc4911990",
+                "sha256_in_prefix": "4a61aa3a3a713c9b8c3fa3e4beb1a3cf5b100c4be1245af6e80d262dc4911990",
+                "size_in_bytes": 836688
+            },
+            {
+                "_path": "lib/python3.9/site-packages/zstandard/backend_cffi.py",
+                "path_type": "hardlink",
+                "sha256": "84c425af47e437e13665406a52ccc037379857d63b762b469a26ac2a37db00c8",
+                "sha256_in_prefix": "84c425af47e437e13665406a52ccc037379857d63b762b469a26ac2a37db00c8",
+                "size_in_bytes": 152430
+            },
+            {
+                "_path": "lib/python3.9/site-packages/zstandard/py.typed",
+                "path_type": "hardlink",
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            }
+        ],
+        "paths_version": 1
+    },
+    "platform": "linux",
+    "requested_spec": "conda-forge/linux-64::zstandard==0.22.0=py39h6090870_0[md5=1ef0de5e7bb652756b11bed0fc98f09e]",
+    "sha256": "67854dbcad0aaad4265918bbac2aa6da3ed350107d76836511753a8bbd2d3b57",
+    "size": 349830,
+    "subdir": "linux-64",
+    "timestamp": 1698830225309,
+    "url": "https://conda.anaconda.org/conda-forge/linux-64/zstandard-0.22.0-py39h6090870_0.conda",
+    "version": "0.22.0"
+}

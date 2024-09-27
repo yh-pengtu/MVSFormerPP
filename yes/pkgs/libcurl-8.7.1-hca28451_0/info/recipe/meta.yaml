@@ -1,0 +1,92 @@
+# This file created by conda-build 24.3.0
+# ------------------------------------------------
+
+package:
+  name: libcurl
+  version: 8.7.1
+source:
+  sha256: 05bbd2b698e9cfbab477c33aa5e99b4975501835a41b7ca6ca71de03d8849e76
+  url: http://curl.haxx.se/download/curl-8.7.1.tar.bz2
+build:
+  number: 0
+  run_exports:
+    - libcurl >=8.7.1,<9.0a0
+  string: hca28451_0
+requirements:
+  build:
+    - _libgcc_mutex 0.1 conda_forge
+    - _openmp_mutex 4.5 2_gnu
+    - binutils_impl_linux-64 2.40 hf600244_0
+    - binutils_linux-64 2.40 hdade7a5_3
+    - gcc_impl_linux-64 12.3.0 he2b93b0_5
+    - gcc_linux-64 12.3.0 h6477408_3
+    - kernel-headers_linux-64 2.6.32 he073ed8_17
+    - ld_impl_linux-64 2.40 h41732ed_0
+    - libgcc-devel_linux-64 12.3.0 h8bca6fd_105
+    - libgcc-ng 13.2.0 h807b86a_5
+    - libgomp 13.2.0 h807b86a_5
+    - libsanitizer 12.3.0 h0f45ef3_5
+    - libstdcxx-ng 13.2.0 h7e041cc_5
+    - sysroot_linux-64 2.12 he073ed8_17
+  host:
+    - _libgcc_mutex 0.1 conda_forge
+    - _openmp_mutex 4.5 2_gnu
+    - c-ares 1.27.0 hd590300_0
+    - ca-certificates 2024.2.2 hbcca054_0
+    - keyutils 1.6.1 h166bdaf_0
+    - krb5 1.21.2 h659d440_0
+    - libedit 3.1.20191231 he28a2e2_2
+    - libev 4.33 hd590300_2
+    - libgcc-ng 13.2.0 h807b86a_5
+    - libgomp 13.2.0 h807b86a_5
+    - libnghttp2 1.58.0 h47da74e_1
+    - libssh2 1.11.0 h0841786_0
+    - libstdcxx-ng 13.2.0 h7e041cc_5
+    - libzlib 1.2.13 hd590300_5
+    - ncurses 6.4.20240210 h59595ed_0
+    - openssl 3.2.1 hd590300_1
+    - zlib 1.2.13 hd590300_5
+    - zstd 1.5.5 hfc55251_0
+  run:
+    - krb5 >=1.21.2,<1.22.0a0
+    - libgcc-ng >=12
+    - libnghttp2 >=1.58.0,<2.0a0
+    - libssh2 >=1.11.0,<2.0a0
+    - libzlib >=1.2.13,<1.3.0a0
+    - openssl >=3.2.1,<4.0a0
+    - zstd >=1.5.5,<1.6.0a0
+test:
+  commands:
+    - curl-config --features
+    - curl-config --protocols
+    - test -f ${PREFIX}/lib/libcurl${SHLIB_EXT}
+    - test ! -f ${PREFIX}/lib/libcurl.a
+    - CURL_SSL_BACKENDS=$(curl-config --ssl-backends)
+    - if ! echo $CURL_SSL_BACKENDS | grep -q "OpenSSL"; then exit 1; fi
+about:
+  description: 'Curl is an open source command line tool and library for transferring
+    data
+
+    with URL syntax. It is used in command lines or scripts to transfer data.
+
+    '
+  dev_url: https://github.com/curl/curl
+  doc_source_url: https://github.com/curl/curl/tree/master/docs
+  doc_url: https://curl.haxx.se/docs/
+  home: http://curl.haxx.se/
+  license: curl
+  license_family: MIT
+  license_file: COPYING
+  summary: tool and library for transferring data with URL syntax
+extra:
+  copy_test_source_files: true
+  final: true
+  flow_run_id: azure_20240327.2.1
+  recipe-maintainers:
+    - jakirkham
+    - mingwandroid
+    - msarahan
+    - ocefpaf
+    - xylar
+  remote_url: https://github.com/conda-forge/curl-feedstock
+  sha: 3d6c4469eb66a73b74f9f457b7a63f8713829354

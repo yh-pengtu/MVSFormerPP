@@ -1,0 +1,16 @@
+{
+  "arch": "x86_64",
+  "build": "py39h4162558_3",
+  "build_number": 3,
+  "depends": [
+    "pypy3.9 >=7.3.12",
+    "python >=3.9,<3.10.0a0",
+    "python_abi 3.9 *_pypy39_pp73"
+  ],
+  "license": "BSD-3-Clause",
+  "name": "jsonpointer",
+  "platform": "linux",
+  "subdir": "linux-64",
+  "timestamp": 1695397449219,
+  "version": "2.4"
+}

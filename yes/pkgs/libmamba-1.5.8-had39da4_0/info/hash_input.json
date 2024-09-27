@@ -1,0 +1,11 @@
+{
+  "target_platform": "linux-64",
+  "channel_targets": "conda-forge main",
+  "spdlog": "1.12",
+  "cxx_compiler_version": "12",
+  "openssl": "3",
+  "libarchive": "3.7",
+  "cxx_compiler": "gxx",
+  "fmt": "10",
+  "zstd": "1.5"
+}

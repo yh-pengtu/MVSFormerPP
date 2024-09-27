@@ -1,0 +1,35 @@
+{
+    "arch": "x86_64",
+    "build": "4_pypy39_pp73",
+    "build_number": 4,
+    "channel": "conda-forge",
+    "constrains": [
+        "python 3.9.* *_73_pypy"
+    ],
+    "depends": [],
+    "extracted_package_dir": "/home/ruqi/projects/MVSFormerPlusPlus/yes/pkgs/python_abi-3.9-4_pypy39_pp73",
+    "files": [],
+    "fn": "python_abi-3.9-4_pypy39_pp73.conda",
+    "license": "BSD-3-Clause",
+    "license_family": "BSD",
+    "link": {
+        "source": "/home/ruqi/projects/MVSFormerPlusPlus/yes/pkgs/python_abi-3.9-4_pypy39_pp73",
+        "type": 1
+    },
+    "md5": "c1b2f29111681a4036ed21eaa3f44620",
+    "name": "python_abi",
+    "package_tarball_full_path": "/home/ruqi/projects/MVSFormerPlusPlus/yes/pkgs/python_abi-3.9-4_pypy39_pp73.tar.bz2",
+    "paths_data": {
+        "paths": [],
+        "paths_version": 1
+    },
+    "platform": "linux",
+    "requested_spec": "conda-forge/linux-64::python_abi==3.9=4_pypy39_pp73[md5=c1b2f29111681a4036ed21eaa3f44620]",
+    "sha256": "ce99d34d578e5da856031ac76b32862614bbc0d97c29e582a8e28bc4b4f0457d",
+    "size": 6410,
+    "subdir": "linux-64",
+    "timestamp": 1695147334830,
+    "track_features": "pypy",
+    "url": "https://conda.anaconda.org/conda-forge/linux-64/python_abi-3.9-4_pypy39_pp73.conda",
+    "version": "3.9"
+}

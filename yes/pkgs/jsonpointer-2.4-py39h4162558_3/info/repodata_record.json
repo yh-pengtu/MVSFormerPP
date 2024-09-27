@@ -1,0 +1,23 @@
+{
+    "arch": "x86_64",
+    "build": "py39h4162558_3",
+    "build_number": 3,
+    "channel": "conda-forge",
+    "depends": [
+        "pypy3.9 >=7.3.12",
+        "python >=3.9,<3.10.0a0",
+        "python_abi 3.9 *_pypy39_pp73"
+    ],
+    "fn": "jsonpointer-2.4-py39h4162558_3.conda",
+    "license": "BSD-3-Clause",
+    "license_family": "BSD",
+    "md5": "eb9456f6c1e080750d4661daa704496f",
+    "name": "jsonpointer",
+    "platform": "linux",
+    "sha256": "dc82202430702a946408a38f01ced667265ebd388702f76cfc950c28c6115e57",
+    "size": 16364,
+    "subdir": "linux-64",
+    "timestamp": 1695397449219,
+    "url": "https://conda.anaconda.org/conda-forge/linux-64/jsonpointer-2.4-py39h4162558_3.conda",
+    "version": "2.4"
+}
