@@ -1,8 +1,0 @@
-libdir=/home/ruqi/projects/MVSFormerPlusPlus/yes/lib
-includedir=/home/ruqi/projects/MVSFormerPlusPlus/yes/include
-
-Name: libsolv
-Description: Library for solving packages
-Version: 0.7.28
-Libs: -L${libdir} -lsolv
-Cflags: -I${includedir}

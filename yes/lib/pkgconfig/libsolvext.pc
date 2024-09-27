@@ -1,9 +1,0 @@
-libdir=/home/ruqi/projects/MVSFormerPlusPlus/yes/lib
-includedir=/home/ruqi/projects/MVSFormerPlusPlus/yes/include
-
-Name: libsolvext
-Description: Library for reading repositories
-Version: 0.7.28
-Requires: libsolv
-Libs: -L${libdir} -lsolvext
-Cflags: -I${includedir}

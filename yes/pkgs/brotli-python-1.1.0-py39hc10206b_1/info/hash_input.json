@@ -1,9 +1,0 @@
-{
-  "target_platform": "linux-64",
-  "channel_targets": "conda-forge main",
-  "c_compiler": "gcc",
-  "c_compiler_version": "12",
-  "python": "3.9.* *_73_pypy",
-  "cxx_compiler_version": "12",
-  "cxx_compiler": "gxx"
-}
