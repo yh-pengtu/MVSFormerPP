@@ -173,7 +173,7 @@
                 "height": 1152,
                 "width": 1536,
                 "shuffle": true,
-                "batch_size": 7,
+                "batch_size": 28,
                 "random_crop": true,
                 "consist_crop": false,
                 "num_workers": 4,

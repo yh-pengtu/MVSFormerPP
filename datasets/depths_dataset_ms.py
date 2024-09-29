@@ -42,7 +42,7 @@ class RandomGamma():
 # the DTU dataset preprocessed by Yao Yao (only for training)
 class DepthSTMVSDataset(Dataset):
     def __init__(self, datapath, listfile, mode, nviews, ndepths=192, interval_scale=1.06, random_crop=False, augment=False,
-                 aug_args=None, height=512, width=640, **kwargs):
+                 aug_args=None, height=512, width=640, pre_fix_resize_scale=0.25, **kwargs):
         super(DepthSTMVSDataset, self).__init__()
         self.datapath = datapath
         self.listfile = os.path.join(datapath, listfile)
@@ -52,6 +52,7 @@ class DepthSTMVSDataset(Dataset):
         self.nviews = nviews
         self.ndepths = ndepths
         self.interval_scale = interval_scale
+        self.pre_fix_resize_scale = pre_fix_resize_scale
 
         if mode != 'train':
             self.random_crop = False
@@ -300,6 +301,12 @@ class DepthSTMVSDataset(Dataset):
             else:
                 depth_hr = None
                 depth_mask_hr = None
+
+            # img_tmp = img
+            if self.pre_fix_resize_scale != 1.0:
+                img = np.asarray(img)
+                img, depth_hr, intrinsics, depth_mask_hr = self.pre_resize(img, depth_hr, intrinsics, depth_mask_hr, self.pre_fix_resize_scale)
+                img = Image.fromarray(img)
 
             # resize according to crop size
             orig_w, orig_h = img.width, img.height
