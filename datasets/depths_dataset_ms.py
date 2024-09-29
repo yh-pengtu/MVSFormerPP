@@ -42,7 +42,7 @@ class RandomGamma():
 # the DTU dataset preprocessed by Yao Yao (only for training)
 class DepthSTMVSDataset(Dataset):
     def __init__(self, datapath, listfile, mode, nviews, ndepths=192, interval_scale=1.06, random_crop=False, augment=False,
-                 aug_args=None, height=512, width=640, pre_fix_resize_scale=0.25, **kwargs):
+                 aug_args=None, height=512, width=640, pre_fix_resize_scale=0.5, **kwargs):
         super(DepthSTMVSDataset, self).__init__()
         self.datapath = datapath
         self.listfile = os.path.join(datapath, listfile)
